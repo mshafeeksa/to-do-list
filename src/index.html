@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasklet</title>
+    <link rel="stylesheet" href="./style.css">
     <script src="./main.js" defer></script>
 </head>
 <body>
@@ -12,22 +13,23 @@
         <div class="side-bar">
             <div class="side-container" id="upcoming">
                 <div class="side-heading">Upcoming Tasks</div>
-                <div class="side-options" id="today">Today</div>
+                <div class="side-options selected" id="today">Today</div>
                 <div class="side-options" id="week">Next 7 days</div>
                 <div class="side-options" id="all">All</div>
             </div>
             <div class="side-container" id="projects">
-                <div class="side-heading" id="projects-header">Projects</div>
-
-                <button class="add-project-button">Add Project</button>
+                <div class="side-heading">Projects</div>
+                <div class="side-options" id="general">General</div>
             </div>
         </div>
         <div class="display-area">
+            <div class="display-area-with-tasks">
+
+            </div>
         </div>
     </div>
-    <dialog id="dialog-modal" class="center">
+    <dialog class="center">
 
-        
     </dialog>
 </body>
 </html>

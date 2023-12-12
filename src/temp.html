@@ -1,0 +1,102 @@
+<!--If no tasks to display in upcoming tasks area-->
+<div class="display-area-no-task">
+    <div class="no-task-display">No tasks to show here! </div>
+</div>
+
+<!--If no tasks to display in project area for add task button-->
+<div class="display-area-no-task">
+    <div class="page-heading">General</div>
+    <div class="button-area">
+        <div class="add-button-container">
+            <div class="add-button-set">
+                <img src="../src/add.svg" alt="+" class="add-icon">
+                <div class="add-text">Add a task</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Task display with add task button for project-->
+<div class="display-area-with-tasks">
+    <div class="page-heading">General</div>
+    <div class="task-container-project">
+        <div class="title-container">
+            <div class="title">Complete todo website</div>
+            <div class="description">The todo website has to be completed with all functionalities</div>
+        </div>
+        <div class="due-date">09th Dec 2024</div>
+        <div class="days-left">365 days left</div>
+        <div class="priority high">high Priority</div>
+        <input type="checkbox" class="check-box">
+        <div class="delete"><img src="../src/remove-grey.svg" alt="Delete"></div>
+    </div>
+    <div class="task-add-container">
+        <img src="../src/add-black.svg" alt="add" class="add-icon-bottom">
+        <div class="add-text-bottom">Add a task</div>
+    </div>
+</div>
+
+<!--Task display for upcoming-->
+<div class="display-area-with-tasks">
+    <div class="page-heading">Today</div>
+    <div class="task-container-upcoming">
+        <div class="project-name">General</div>
+        <div class="title-container">
+            <div class="title">Complete todo website</div>
+            <div class="description">The todo website has to be completed with all functionalities</div>
+        </div>
+        <div class="due-date">09th Dec 2024</div>
+        <div class="days-left">365 days left</div>
+        <div class="priority high">high Priority</div>
+        <input type="checkbox" class="check-box" >
+        <div class="delete"><img src="./remove.svg" alt="Delete"></div>
+    </div>                  
+</div>
+
+<!--Modal for edit and delete todo-->
+<form action="#" id="todo-entry-modal">
+    <div><h2>Enter todo details</h2></div>
+    <div class="todo-title-section form-section">
+        <input type="text" id="todo-title" name="todo-title" placeholder="Todo title">
+    </div>
+    <div class="todo-description-section form-section">
+        <input type="text" id="todo-description" name="todo-description" placeholder="Todo description">
+    </div>
+    <div class="todo-duedate-section form-section">
+        <label for="todo-duedate">Due date: </label>
+        <input type="date" id="todo-duedate" name="todo-duedate">
+    </div>
+    <div class="todo-priority-section form-section">
+        <label for="todo-priority">Priority: </label>
+        <select name="todo-priority" id="todo-priority"> 
+            <option value="high">High</option> 
+            <option value="medium">Medium</option> 
+            <option value="low">Low</option>
+        </select>
+    </div>
+    <div class="form-buttons-section">
+        <button id="submit-button">Submit</button>
+        <button id="delete-button">Delete</button>
+        <button value="cancel" formmethod="dialog">Cancel</button>
+    </div>
+</form>
+
+
+
+<!--projet name display in sidebar-->
+<div class="side-options side-options-project selected" id="general">
+    <div class="side-option-name">General</div>
+    <img src="../src/remove-grey.svg" alt="" class="delete-side-option">
+</div>
+
+
+<!--modal for add project-->
+<form action="#" id="project-entry-modal">
+    <h2 class="title-add-project">New Project</h2>
+    <input type="text" placeholder="Enter new project name">
+    <div class="form-buttons-section">
+        <button id="submit-button">Submit</button>
+        <button id="delete-button">Delete</button>
+        <button value="cancel" formmethod="dialog">Cancel</button>
+    </div>
+</form>

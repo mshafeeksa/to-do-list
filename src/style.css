@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root{
+    --theme-shade-dark-1: #092635;
+    --theme-shade-dark-2: #1B4242;
+    --theme-shade-dark-3: #5C8374;
+    --theme-shade-light: #9EC8B9;
+    --text-color-1: #000000;
+    --text-color-2: #ffffff;
+    --font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+    --font-logo: 'Salsa', cursive;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-family);
+}
+
+body{
+    background-image: url("./bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container{
+    background-color: var(--theme-shade-dark-1);
+    width: 80%;
+    height: 80%;
+    max-height: 80%;
+    padding-top: 1%;
+    padding-left: 3%;    
+    display: grid;
+    grid-template: 1fr 8fr/ 1fr 4fr;
+}
+
+
+.logo-container{
+    font-family: var(--font-logo);
+    color: var(--text-color-2);
+    font-size: 2.4rem;
+    display: flex;
+    align-items:center;
+    grid-area: 1/1/1/-1;
+    padding: 1% 0;
+    cursor:default;
+}
+
+.trade-mark{
+    font-size: 1rem;
+    align-self: self-start  ;    
+}
+
+.side-heading{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-color-2);
+    border-bottom: 2px solid var(--text-color-2);
+    cursor:default;
+    margin-right: 10%;
+}
+
+.side-bar{
+    padding: 5% 0 5% 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+#projects{
+    flex: 1;
+}
+
+.side-options{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 1.2rem;
+    color: var(--text-color-2);
+    cursor: pointer;
+    padding: 1% 0 1% 5%;
+    display: flex;
+    justify-content:space-between;
+}
+
+.side-options:hover{
+    font-weight: 700;  
+}
+
+.selected{
+    background-color:var(--theme-shade-light);
+    border-radius: 16px 0 0 16px;
+    font-weight: 700;
+    color: var(--text-color-1);
+}
+
+.display-area{
+    background-color: var(--theme-shade-light);
+    height: 100%;
+    grid-area: 2/2/-1/-1;
+    position: relative;
+}
+
+.display-area-no-task{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+}
+
+.button-area{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.no-task-display{
+    font-size: 2rem;
+    color: var(--theme-shade-dark-2);
+    flex: 1;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.add-icon{
+    width: 40%;
+    cursor: pointer;
+}
+
+.add-button-set{
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-button-container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-button-set{
+    color: var(--text-color-1);
+    cursor: pointer;
+    padding: 1%;
+}
+
+
+
+.add-button-set:hover{
+    box-sizing:border-box;
+    background-color: var(--theme-shade-dark-1);
+    color: var(--text-color-2);
+    border-radius: 16px ;
+}
+
+.add-button-set:active{
+
+}
+
+.display-area-with-tasks{
+    grid-area: 2 1/-1 -4;
+    padding: 1%;
+    padding-bottom: 0;
+    overflow: auto;    
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding-top: 0;
+}
+
+.page-heading{
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-left: 0;
+    margin-top: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    position: sticky;
+    top: 0;
+    background-color: var(--theme-shade-light);
+}
+
+.task-container-project{
+    display: grid;
+    grid-template-columns: 6fr 2fr 1.5fr 2fr 0.5fr 0.5fr;
+    align-items: center;
+    gap: 1.5%;
+    border-radius: 32px;
+    border: 1px solid var(--theme-shade-dark-2);
+    background-color: var(--theme-shade-dark-2);
+    color: #ffffff;
+    padding: 1% 3%;
+    margin: 1% auto;
+}
+
+.strike-through{
+    text-decoration: line-through;
+}
+
+
+.high{
+    background-color: red;
+    color: #ffffff;
+}
+
+.medium{
+    background-color: yellow;
+    color: #000000;
+}
+
+.low{
+    background-color: green;
+    color: #000000;
+}
+
+.delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.delete-icon{
+    color: var(--theme-shade-light);
+}
+
+.delete:hover{
+
+}
+
+.delete img{
+    width: 100%;
+    height: 100%;
+}
+
+.due-date, .days-left, .priority, .check-box, .delete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+}
+
+.due-date, .days-left, .priority{
+    cursor: default;
+}
+
+.title{
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+.description{
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.task-add-container:hover{
+    color: red;
+}
+
+.task-add-container{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 10%;
+    justify-content: center;
+    align-items: center ;
+    margin: 2% auto;
+    cursor: pointer;
+}
+
+
+.add-icon-bottom{
+    width:auto;
+    max-height:100%;
+}
+
+.task-container-upcoming{
+    display: grid;
+    grid-template-columns: 2fr 6fr 2fr 1.5fr 2fr 0.5fr 0.5fr;
+    align-items: center;
+    gap: 1.5%;
+    border-radius: 32px;
+    border: 1px solid var(--theme-shade-dark-2);
+    background-color: var(--theme-shade-dark-2);
+    color: #ffffff;
+    padding: 1% 3%;
+    margin: 1% auto;
+}
+
+.task-container-upcoming .due-date, .task-container-upcoming .days-left{
+    font-size: 0.8rem;
+}
+
+.task-container-upcoming .project-name{
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.center {
+    padding: 1%;
+    font-size: 1.2rem;
+    line-height: 3rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid black;
+    background-color: var(--theme-shade-dark-2);
+    color: var(--text-color-2);
+    box-shadow: 4px 5px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 4px 5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 5px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 8px;
+}
+
+.add-todo-modal{
+    height: 45%;
+    width: 30%;
+}
+
+.add-project-modal{
+    height: 25%;
+    width: 30%;
+}
+
+#todo-entry-modal h2{
+    text-align: center;
+}
+
+input{
+    width: 100%;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    padding: 1%;
+}
+
+.todo-duedate-section, .todo-priority-section{
+    display: flex;
+    gap: 5%;
+    width: 60%;
+}
+
+.todo-duedate-section label{
+    text-wrap: nowrap;
+}
+
+.todo-description-section{
+    min-height: 40%;
+}
+
+select, option{
+    font-size: 1.1rem;
+}
+
+.form-section{
+    margin-top: 2%;
+}
+
+form button{
+    width: 20%;
+    height: 100%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 1% 0;
+    border-radius: 8px;
+    font-size: 900  ;
+}
+
+form .form-buttons-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    margin-top: 5%;
+    min-height: 100%;
+}
+
+#delete-button{
+    background-image: linear-gradient(to right, #EB3349 0%, #F45C43  51%, #EB3349  100%);
+    color: #ffffff;
+    background-size: 200% auto;
+}
+
+
+#delete-button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+#add-button{
+    background-image: linear-gradient(to right, #ADD100 0%, #7B920A  51%, #ADD100  100%);
+    color: #000000;
+    background-size: 200% auto;     
+}
+
+#add-button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+ 
+.add-project-button{
+    padding: 2% 2%;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius:4px;
+    cursor: pointer;
+    background-color: var(--theme-shade-light);
+    margin-top: 4%;
+    margin-left: 5%;
+}
+
+.add-project-button:hover{
+    background-color: var(--theme-shade-dark-2);
+    color: var(--text-color-2);
+}
+
+.side-options img{
+    height: 1.4rem;
+    margin-right: 8%;
+}
