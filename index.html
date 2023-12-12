@@ -3,10 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./main.js"></script>
+    <title>Tasklet</title>
+    <script src="./main.js" defer></script>
 </head>
 <body>
-    
+    <div class="main-container">
+        <div class="logo-container">Tasklet<span class="trade-mark">&trade;</span></div>
+        <div class="side-bar">
+            <div class="side-container" id="upcoming">
+                <div class="side-heading">Upcoming Tasks</div>
+                <div class="side-options" id="today">Today</div>
+                <div class="side-options" id="week">Next 7 days</div>
+                <div class="side-options" id="all">All</div>
+            </div>
+            <div class="side-container" id="projects">
+                <div class="side-heading" id="projects-header">Projects</div>
+
+                <button class="add-project-button">Add Project</button>
+            </div>
+        </div>
+        <div class="display-area">
+        </div>
+    </div>
+    <dialog id="dialog-modal" class="center">
+
+        
+    </dialog>
 </body>
 </html>
